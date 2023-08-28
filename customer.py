@@ -28,7 +28,7 @@ def main() -> None:
         Customer("Alice", 35),
         Customer("Bob", 30),
     ]
-    is_eligible_60 = functools.partial(is_eligible_for_promotion, 60)
+    is_eligible_60 = functools.partial(is_eligible_for_promotion, cutoff_age=60)
     send_email_promotion(customers, is_eligible_60)
 
 
